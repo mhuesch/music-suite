@@ -924,7 +924,7 @@ newtype IOExportM a = IOExportM {runIOExportM_ :: IO a}
 
 instance MonadError String IOExportM where
 
-  throwError e = fail e
+  throwError e = BasePrelude.fail e
 
   -- TODO
   -- catchError (IOExportM k) = IOExportM $ do
